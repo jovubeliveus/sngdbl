@@ -1,0 +1,18 @@
+# makefile for the sgnl benchmark for linux (j.b. 9/95)
+
+FF = gfortran
+CC = gcc
+FFLAGS = -O3 
+CCLAGS = -O3
+# FFLAGS = -g 
+# CCLAGS = -g
+
+.f.o:
+	${FF} ${FFLAGS} -c $<
+.c.o:
+	${CC} ${CCLAGS} -c $<
+
+OBJECTS = sngdbl.o tick.o
+
+sngdbl: ${OBJECTS}
+	${FF} ${FFLAGS} -o $@ ${OBJECTS} ${LIBS}

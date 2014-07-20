@@ -1,0 +1,41 @@
+-----------------------------------------------------------------------
+
+---- README
+
+---- Benchmark for CG-like Applications SNGDBL
+---- by J. Behrens
+
+---- LinuX Version 1.0 (9/95)
+---- Updated for Scientific Software Development (06/2012)
+
+-----------------------------------------------------------------------
+
+
+
+---- This directory contains the following file:
+
+- Makefile	: Makefile to build sngdbl executable (Intel Fortran)
+- Makefile.gfortran : this Makegile is equipped for gfortran
+- README	: This file
+- sngdbl	: Executable for Linux 1.1
+- sngdbl.f	: Fortran source file for the benchmark
+- tick.f	: Timing routine based on 'date_and_time' intrinsic
+- tick_.c	: Timing routine based on 'getrusage' (legacy code)
+
+
+
+---- What it does:
+
+sngdbl is meant to be a simple benchmarking program for CG-like
+applications. There are two 
+	matrix-matrix
+routines, one of them is with loop unrolling (in order to test its
+effect), one 
+	matrix-vector
+routine with a sparse matrix (in Ellpack-Itpack format) such that
+indirect adressing is needed, two
+	vector-vector
+routines, one axpy and one dotprodukt routine.
+
+
+---- J. Behrens, joern.behrens@zmaw.de
