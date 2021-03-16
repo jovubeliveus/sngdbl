@@ -2,7 +2,7 @@
 
 FF = gfortran
 CC = gcc
-FFLAGS = -O3 
+FFLAGS = -O3 -L/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/lib
 CCLAGS = -O3
 # FFLAGS = -g 
 # CCLAGS = -g
