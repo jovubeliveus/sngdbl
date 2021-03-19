@@ -16,3 +16,10 @@ OBJECTS = sngdbl.o tick.o
 
 sngdbl: ${OBJECTS}
 	${FF} ${FFLAGS} -o $@ ${OBJECTS} ${LIBS}
+
+test: sngdbl
+	./sngdbl 1024 > results.txt
+
+clean::
+	@rm -f *.o
+	@rm -f sngdbl
